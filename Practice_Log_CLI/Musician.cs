@@ -28,7 +28,5 @@ namespace Practice_Log_CLI
             }
         }
 
-        
-       
     }
 }

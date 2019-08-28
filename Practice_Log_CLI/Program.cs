@@ -45,7 +45,6 @@ namespace Practice_Log_CLI
                 }
             } while (isLooping);
             
-                
             Console.ReadKey();
         }
 
@@ -173,10 +172,23 @@ namespace Practice_Log_CLI
             Console.Write("Input a number to Edit a piece: ");
             string editInput = Console.ReadLine();
             int editChoice = Convert.ToInt32(editInput);
+
+            AddDays(editChoice);
         }
 
-        static void AddDays()
+        static void AddDays(int editChoice)
         {
+            Piece selectedPiece = AllSongs[editChoice - 1];
+
+            //Days Enum
+            foreach(Days day in Enum.GetValues(typeof(Days)))
+            {
+                int x = (int)day;
+                Console.WriteLine("{0} = {1}", day, x + 1);
+            }
+            Console.WriteLine("Add a practice day to schedule by Number: ");
+            string dayInput = Console.ReadLine();
+            int selectedDay = Convert.ToInt32(dayInput);
 
         }
 
