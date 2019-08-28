@@ -1,0 +1,11 @@
+D:\Fabian_Files\Coding Projects\Practice_Log_CLI\Practice_Log_CLI\bin\Debug\netcoreapp2.0\Practice_Log_CLI.deps.json
+D:\Fabian_Files\Coding Projects\Practice_Log_CLI\Practice_Log_CLI\bin\Debug\netcoreapp2.0\Practice_Log_CLI.runtimeconfig.json
+D:\Fabian_Files\Coding Projects\Practice_Log_CLI\Practice_Log_CLI\bin\Debug\netcoreapp2.0\Practice_Log_CLI.runtimeconfig.dev.json
+D:\Fabian_Files\Coding Projects\Practice_Log_CLI\Practice_Log_CLI\bin\Debug\netcoreapp2.0\Practice_Log_CLI.dll
+D:\Fabian_Files\Coding Projects\Practice_Log_CLI\Practice_Log_CLI\bin\Debug\netcoreapp2.0\Practice_Log_CLI.pdb
+D:\Fabian_Files\Coding Projects\Practice_Log_CLI\Practice_Log_CLI\obj\Debug\netcoreapp2.0\Practice_Log_CLI.csprojAssemblyReference.cache
+D:\Fabian_Files\Coding Projects\Practice_Log_CLI\Practice_Log_CLI\obj\Debug\netcoreapp2.0\Practice_Log_CLI.csproj.CoreCompileInputs.cache
+D:\Fabian_Files\Coding Projects\Practice_Log_CLI\Practice_Log_CLI\obj\Debug\netcoreapp2.0\Practice_Log_CLI.AssemblyInfoInputs.cache
+D:\Fabian_Files\Coding Projects\Practice_Log_CLI\Practice_Log_CLI\obj\Debug\netcoreapp2.0\Practice_Log_CLI.AssemblyInfo.cs
+D:\Fabian_Files\Coding Projects\Practice_Log_CLI\Practice_Log_CLI\obj\Debug\netcoreapp2.0\Practice_Log_CLI.dll
+D:\Fabian_Files\Coding Projects\Practice_Log_CLI\Practice_Log_CLI\obj\Debug\netcoreapp2.0\Practice_Log_CLI.pdb
