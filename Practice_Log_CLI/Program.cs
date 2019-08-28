@@ -172,8 +172,34 @@ namespace Practice_Log_CLI
             Console.Write("Input a number to Edit a piece: ");
             string editInput = Console.ReadLine();
             int editChoice = Convert.ToInt32(editInput);
+            PracticeMenu(editChoice);  
+        }
 
-            AddDays(editChoice);
+        static void PracticeMenu(int editChoice)
+        {
+            Console.WriteLine("1. Schedule Day");
+            Console.WriteLine("2. Remove Day");
+            Console.WriteLine("3. Back to Main Menu");
+            Console.Write("Choice: ");
+            string userInput = Console.ReadLine();
+            int choice = Convert.ToInt32(userInput);
+
+            switch (choice)
+            {
+                case 1:
+                    AddDays(editChoice);
+                    break;
+                case 2:
+                    DeleteDays(editChoice);
+                    break;
+                case 3:
+                    MainMenu();
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice");
+                    break;
+            }
+
         }
 
         static void AddDays(int editChoice)
@@ -188,8 +214,31 @@ namespace Practice_Log_CLI
             }
             Console.WriteLine("Add a practice day to schedule by Number: ");
             string dayInput = Console.ReadLine();
-            int selectedDay = Convert.ToInt32(dayInput);
+            int dayInputNum = Convert.ToInt32(dayInput);
 
+            string selectedDay = Enum.GetName(typeof(Days), dayInputNum - 1);
+            selectedPiece.addDays(selectedDay);
+
+            selectedPiece.viewDays();
+        }
+
+        static void DeleteDays(int deleteChoice)
+        {
+            Piece selectedPiece = AllSongs[deleteChoice - 1];
+
+            Console.WriteLine("{0} - {1}", selectedPiece.Artist, selectedPiece.Title);
+            
+            for(int i=0; i < selectedPiece.DaysToPractice.Count; i++)
+            {
+                Console.WriteLine("[{0}] {1}", i + 1, selectedPiece.DaysToPractice[i]);
+            }
+
+            Console.Write("Add a practice day to delete by Number: ");
+            string deleteInput = Console.ReadLine();
+            int delChoice = Convert.ToInt32(deleteInput);
+
+            selectedPiece.DeleteDay(delChoice - 1);
+            //selectedPiece.DaysToPractice.RemoveAt(delChoice - 1);
         }
 
         static void DeletePiece()
