@@ -130,6 +130,8 @@ namespace Practice_Log_CLI
             for (int i = 0; i < AllSongs.Count; i++)
             {
                 Console.WriteLine("[{0}] {1} - {2}", i + 1, AllSongs[i].Artist, AllSongs[i].Title);
+                AllSongs[i].viewDays();
+
             }
         }
 
@@ -199,20 +201,19 @@ namespace Practice_Log_CLI
                     Console.WriteLine("Invalid choice");
                     break;
             }
-
         }
 
         static void AddDays(int editChoice)
         {
             Piece selectedPiece = AllSongs[editChoice - 1];
-
+            Console.WriteLine("{0} - {1}", selectedPiece.Artist, selectedPiece.Title);
             //Days Enum
             foreach(Days day in Enum.GetValues(typeof(Days)))
             {
                 int x = (int)day;
                 Console.WriteLine("{0} = {1}", day, x + 1);
             }
-            Console.WriteLine("Add a practice day to schedule by Number: ");
+            Console.Write("Add a practice day to schedule by Number: ");
             string dayInput = Console.ReadLine();
             int dayInputNum = Convert.ToInt32(dayInput);
 

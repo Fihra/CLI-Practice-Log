@@ -51,12 +51,20 @@ namespace Practice_Log_CLI
 
         public void viewDays()
         {
-            Console.WriteLine("------Scheduled Days to Practice-----");
-            foreach(string day in DaysToPractice)
+            Console.WriteLine("---Scheduled Days to Practice---");
+            if(DaysToPractice.Count < 1)
             {
-                Console.WriteLine(day);
+                Console.WriteLine("No Scheduled Days");
             }
-            Console.WriteLine("---------------------");
+            else
+            {
+                foreach (string day in DaysToPractice)
+                {
+                    Console.WriteLine(day);
+                }
+            }
+
+            Console.WriteLine("--------------");
         }
 
 
