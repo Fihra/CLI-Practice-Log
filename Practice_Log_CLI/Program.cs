@@ -84,9 +84,10 @@ namespace Practice_Log_CLI
                 Console.WriteLine("1. Show all Musicians");
                 Console.WriteLine("2. View Pieces");
                 Console.WriteLine("3. Add new piece to practice");
-                Console.WriteLine("4. Edit Practice Days for a Piece");
-                Console.WriteLine("5. Delete a Piece");
-                Console.WriteLine("6. Exit");
+                Console.WriteLine("4. View Schedule");
+                Console.WriteLine("5. Edit Practice Days for a Piece");
+                Console.WriteLine("6. Delete a Piece");
+                Console.WriteLine("7. Exit");
                 Console.Write("Choice: ");
 
                 string userTyping = Console.ReadLine();
@@ -104,12 +105,15 @@ namespace Practice_Log_CLI
                         AddPiece(); 
                         break;
                     case 4:
-                        EditPracticeDays();
+                        ViewSchedule();
                         break;
                     case 5:
-                        DeletePiece();
+                        EditPracticeDays();
                         break;
                     case 6:
+                        DeletePiece();
+                        break;
+                    case 7:
                         isLooping = false;
                         break;
                     default:
@@ -125,15 +129,7 @@ namespace Practice_Log_CLI
 
         }
 
-        static void DisplayPieces()
-        {
-            for (int i = 0; i < AllSongs.Count; i++)
-            {
-                Console.WriteLine("[{0}] {1} - {2}", i + 1, AllSongs[i].Artist, AllSongs[i].Title);
-                AllSongs[i].viewDays();
 
-            }
-        }
 
         static void ViewPieces()
         {
@@ -166,6 +162,35 @@ namespace Practice_Log_CLI
             Piece newPiece = new Piece(newArtist, newTitle);
 
             AllSongs.Add(newPiece);
+        }
+
+        static void ViewSchedule()
+        {
+            int dayRow = -20;
+            Console.WriteLine("-----Current Schedule-----");
+            Console.WriteLine("{0,0} | {1,-8} | {2,-8} | {3,-8} | {4,-8} | {5,-8} | {6,-8}", Days.Sunday, Days.Monday, Days.Tuesday, Days.Wednesday, Days.Thursday, Days.Friday, Days.Saturday);
+
+
+            //for(int i=0; i< Enum.GetNames(typeof(Days)).Length; i++)
+            //{
+            //    Console.Write("{i,dayRow}", Enum.GetName(typeof(Days),i));
+            //    dayRow += 20;
+            //}
+
+
+
+
+            Console.WriteLine("--------------------------");
+        }
+
+        static void DisplayPieces()
+        {
+            for (int i = 0; i < AllSongs.Count; i++)
+            {
+                Console.WriteLine("[{0}] {1} - {2}", i + 1, AllSongs[i].Artist, AllSongs[i].Title);
+                AllSongs[i].viewDays();
+
+            }
         }
 
         static void EditPracticeDays()
